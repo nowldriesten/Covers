@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Covers opdracht</title>
+    <meta name="author" content="Nowl Driesten">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body lang="nl">
+    <div class="wrapper">
+      <div class="albumcover">
+        <img src="img/bt2.jpg" alt="Bobby Tarantino II by Logic">
+        <article>
+          <h3>Logic</h3>
+
+          <h4>Bobby Tarantino II</h4>
+
+          <p>Bobby Tarantino II is the seventh mixtape<br>
+          by American rapper and musician Logic.<br>
+          It was released on March 9, 2018.</p>
+        </article>
+      </div>
+<!--Eind BT2-->
+      <div class="albumcover">
+        <img src="img/ysiv.jpg" alt="Young Sinatra IV by Logic">
+          <article>
+            <h3>Logic</h3>
+
+            <h4>YSIV</h4>
+
+            <p>YSIV is the fourth studio album<br>
+              by American rapper Logic,<br>
+              released on September 28, 2018.</p>
+            </article>
+
+      </div>
+    <!-- Eind YSIV -->
+      <div class="albumcover">
+        <img src="img/kamikaze.jpg" alt="Kamikaze by Eminem">
+          <article>
+            <h3>Eminem</h3>
+
+            <h4>Kamikaze</h4>
+
+            <p>Kamikaze is the tenth studio album<br>
+              by American rapper Eminem.<br>
+              The album was released on August 31, 2018.</p>
+            </article>
+      </div>
+    <!-- Eind Kamikaze -->
+      <div class="albumcover">
+        <img src="img/skins.jpg" alt="Skins by XXXTentacion">
+          <article>
+            <h3>XXXTentacion</h3>
+
+              <h4>Skins</h4>
+
+              <p>Skins is the third studio album<br>
+                by American rapper XXXTentacion,<br>
+                released on December 7, 2018.</p>
+          </article>
+      </div>
+    <!-- Eind Skins -->
+      <div class="albumcover">
+        <img src="img/nfts.jpg" alt="Therapy Session by NF">
+          <article>
+            <h3>NF</h3>
+
+            <h4>Therapy Session</h4>
+
+            <p>Therapy Session is the second studio album<br>
+              by American hip hop artist NF,<br>
+              released the album on April 22, 2016.</p>
+
+          </article>
+      </div>
+    <!-- Eind Therapy Session -->
+      <div class="albumcover">
+        <img src="img/mansion.jpg" alt="Mansion by NF">
+          <article>
+            <h3>NF</h3>
+
+            <h4>Mansion</h4>
+
+            <p>Mansion is the debut studio album<br>
+              by American hip hop artist NF,<br>
+              released on March 31, 2015.</p>
+
+          </article>
+      </div>
+    </div>
+    <!-- Eind Mansion -->
+  <footer>
+
+    <!-- ############################### -->
+    <!-- Alles is gevalideert via de site maar ik kon deze icoontjes niet goed krijgen. -->
+    <!-- ############################### -->
+
+      <!-- <div id="validatie">
+          <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+              <img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+              <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+          </a>
+      </div> -->
+    </footer>
+
+  <script>
+  let Albums = document.querySelectorAll('.albumcover');
+
+  // Alles na e.target etc deed het niet meer. De alert daarvoor functioneerde nog wel. Ik hoor graag wat ik fout heb gedaan
+
+  const naarBoven = (e) => {
+    e.target.classList.remove('naarBeneden');
+    e.target.classList.add('naarBoven');
+    // alert('geraakt');
+  }
+  const naarBeneden = (e) => {
+    e.target.classList.remove('naarBoven');
+    e.target.classList.add('naarBeneden');
+  }
+  for(let i=0; i<Albums.length; i++) {
+    let albumcover = Albums [i];
+    albumcover.addEventListener('mouseenter' , naarBoven);
+    albumcover.addEventListener('mouseleave' , naarBeneden);
+
+  }
+  </script>
+  </body>
+</html>
