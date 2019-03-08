@@ -33,10 +33,10 @@ html, body, div, article, p, h3, h4 {
   /* animation: up 1.3s forwards; */
 }
 .naarBoven article {
-  animation: naarBoven 1s forwards;
+  animation: up 1s forwards;
 }
 .naarBeneden article {
-  animation: naarBeneden 1s forwards;
+  animation: down 1s forwards;
 }
 
 @-webkit-keyframes down {
